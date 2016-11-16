@@ -22,7 +22,8 @@ class CalcDialog(QDialog):
             self.ui.calculatedXp.setText(str(New_Xp))
         except:
             print("An error has occurred")
-        
+            print("TEST here")
+			
 if __name__ == '__main__':
     import sys
  
