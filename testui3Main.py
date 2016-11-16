@@ -21,6 +21,7 @@ class CalcDialog(QDialog):
             New_Xp = int((Current_Xp / Current_GameMode_Calc)*New_GameMode_Calc)
             self.ui.calculatedXp.setText(str(New_Xp))
         except:
+            #Still need to add a pop-up message here
             print("An error has occurred")
             print("TEST here")
 			
