@@ -1,9 +1,17 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'test.ui'
+#
+# Created by: PyQt5 UI code generator 5.6
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(310, 143)
+        Dialog.resize(306, 143)
         Dialog.setWindowTitle("Runique Xp Calculator")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../../Pictures/Photoshop/Runique/Logo..png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -53,7 +61,7 @@ class Ui_Dialog(object):
         self.calculatedXp.setReadOnly(True)
         self.calculatedXp.setObjectName("calculatedXp")
         self.calculateButton = QtWidgets.QPushButton(Dialog)
-        self.calculateButton.setGeometry(QtCore.QRect(210, 110, 81, 21))
+        self.calculateButton.setGeometry(QtCore.QRect(180, 110, 111, 21))
         self.calculateButton.setObjectName("calculateButton")
         self.calculatedXpTill99 = QtWidgets.QLineEdit(Dialog)
         self.calculatedXpTill99.setEnabled(True)
@@ -63,12 +71,17 @@ class Ui_Dialog(object):
         self.calculatedXpTill99.setReadOnly(True)
         self.calculatedXpTill99.setObjectName("calculatedXpTill99")
         self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(30, 80, 131, 20))
+        self.label_3.setGeometry(QtCore.QRect(50, 80, 51, 20))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_3.setFont(font)
-        self.label_3.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_3.setObjectName("label_3")
+        self.enteredLvlCompared = QtWidgets.QLineEdit(Dialog)
+        self.enteredLvlCompared.setGeometry(QtCore.QRect(110, 80, 51, 20))
+        self.enteredLvlCompared.setMaxLength(3)
+        self.enteredLvlCompared.setAlignment(QtCore.Qt.AlignCenter)
+        self.enteredLvlCompared.setObjectName("enteredLvlCompared")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -97,4 +110,7 @@ class Ui_Dialog(object):
         self.calculatedXp.setPlaceholderText(_translate("Dialog", "Calculated xp amount"))
         self.calculateButton.setText(_translate("Dialog", "Calculate"))
         self.calculatedXpTill99.setPlaceholderText(_translate("Dialog", "in current gamemode"))
-        self.label_3.setText(_translate("Dialog", "Xp till you reach 99"))
+        self.label_3.setText(_translate("Dialog", "XP till :"))
+        self.enteredLvlCompared.setText(_translate("Dialog", "99"))
+        self.enteredLvlCompared.setPlaceholderText(_translate("Dialog", "Lvl"))
+
