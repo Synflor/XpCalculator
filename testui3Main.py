@@ -23,7 +23,8 @@ class CalcDialog(QDialog):
         except:
             #Still need to add a pop-up message here
             print("An error has occurred")
-        
+            print("TEST here")
+			
 if __name__ == '__main__':
     import sys
  
