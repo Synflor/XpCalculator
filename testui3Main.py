@@ -20,11 +20,13 @@ class CalcDialog(QDialog):
             Current_Xp = int(self.ui.currentXp.text())
             New_Xp = int((Current_Xp / Current_GameMode_Calc)*New_GameMode_Calc)
             self.ui.calculatedXp.setText(str(New_Xp))
+            TillMaxLevel = int(((13034431 - New_Xp) / New_GameMode_Calc) * Current_GameMode_Calc)
+            self.ui.calculatedXpTill99.setText(str(TillMaxLevel))
         except:
             #Still need to add a pop-up message here
             print("An error has occurred")
             print("TEST here")
-			
+            
 if __name__ == '__main__':
     import sys
  
