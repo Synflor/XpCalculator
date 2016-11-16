@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>321</width>
-    <height>123</height>
+    <width>310</width>
+    <height>143</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
   <widget class="QComboBox" name="currentGamemode">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>50</x>
      <y>20</y>
      <width>111</width>
      <height>22</height>
@@ -60,8 +60,8 @@
   <widget class="QComboBox" name="newGamemode">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>60</y>
+     <x>50</x>
+     <y>50</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -109,6 +109,9 @@
    <property name="inputMethodHints">
     <set>Qt::ImhDigitsOnly</set>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
    <property name="placeholderText">
     <string>Amount of xp</string>
    </property>
@@ -116,7 +119,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>20</y>
      <width>41</width>
      <height>20</height>
@@ -137,8 +140,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>60</y>
+     <x>20</x>
+     <y>50</y>
      <width>31</width>
      <height>20</height>
     </rect>
@@ -157,18 +160,21 @@
   </widget>
   <widget class="QLineEdit" name="calculatedXp">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>60</y>
+     <y>50</y>
      <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="inputMethodHints">
     <set>Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
    <property name="readOnly">
     <bool>true</bool>
@@ -181,13 +187,59 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>90</y>
+     <y>110</y>
      <width>81</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
     <string>Calculate</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="calculatedXpTill99">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string>in current gamemode</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Xp till you reach 99</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>
