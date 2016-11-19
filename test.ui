@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>306</width>
-    <height>143</height>
+    <width>303</width>
+    <height>196</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
   <widget class="QComboBox" name="currentGamemode">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>20</y>
+     <x>20</x>
+     <y>40</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -60,8 +60,8 @@
   <widget class="QComboBox" name="newGamemode">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>50</y>
+     <x>170</x>
+     <y>40</y>
      <width>111</width>
      <height>22</height>
     </rect>
@@ -100,8 +100,8 @@
   <widget class="QLineEdit" name="currentXp">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>20</y>
+     <x>20</x>
+     <y>70</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -119,19 +119,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>41</width>
+     <x>20</x>
+     <y>10</y>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>From</string>
+    <string>Current</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -140,15 +142,17 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>50</y>
-     <width>31</width>
+     <x>170</x>
+     <y>10</y>
+     <width>111</width>
      <height>20</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -164,8 +168,8 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>50</y>
+     <x>170</x>
+     <y>70</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -186,8 +190,8 @@
   <widget class="QPushButton" name="calculateButton">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>110</y>
+     <x>170</x>
+     <y>160</y>
      <width>111</width>
      <height>21</height>
     </rect>
@@ -202,8 +206,8 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>80</y>
+     <x>20</x>
+     <y>160</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -218,15 +222,15 @@
     <bool>true</bool>
    </property>
    <property name="placeholderText">
-    <string>in current gamemode</string>
+    <string>In current gamemode</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>80</y>
-     <width>51</width>
+     <x>20</x>
+     <y>130</y>
+     <width>61</width>
      <height>20</height>
     </rect>
    </property>
@@ -236,17 +240,17 @@
     </font>
    </property>
    <property name="text">
-    <string>XP till :</string>
+    <string>Xp till: </string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="enteredLvlCompared">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>80</y>
+     <x>80</x>
+     <y>130</y>
      <width>51</width>
      <height>20</height>
     </rect>
@@ -262,6 +266,51 @@
    </property>
    <property name="placeholderText">
     <string>Lvl</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Current level</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>100</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Calculated level</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>40</y>
+     <width>20</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
    </property>
   </widget>
  </widget>
