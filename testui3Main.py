@@ -38,14 +38,16 @@ class CalcDialog(QDialog):
             till_wanted_level = int(((dic_level_req - new_xp) / new_game_mode_calc) * current_game_mode_calc)
             self.ui.calculatedXpTill99.setText(str(till_wanted_level))
 
-            #Doesn't currently work
-            #current_xp = int(self.ui.currentXp.text())
-            #currentxp = CalcDialog.takeClosest(self, game_modes, current_xp)
-            #current_level = game_modes.index(currentxp)
-            #self.ui.currentLevel.setText(str(current_level))
+            current_xp = int(self.ui.currentXp.text())
+            current_level = min(range(len(dic_level_requirement)), key=lambda i: abs(dic_level_requirement[i] - current_xp))
+            self.ui.currentLevel.setText(str(current_level))
+
+            new_level = min(range(len(dic_level_requirement)), key=lambda i: abs(dic_level_requirement[i] - new_xp))
+            self.ui.calculatedLevel.setText(str(new_level))
         except:
             #Still need to add a pop-up message here
             print("An error has occurred")
+
 
     def getCurrentGameMode(self, GameModes):
         Current_GameMode = str(self.ui.currentGamemode.currentText())
