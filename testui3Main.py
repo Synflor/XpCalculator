@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QDialog, QApplication
 from testgui3 import Ui_Dialog
-from bisect import bisect_left
+
 
 class CalcDialog(QDialog):
     
@@ -28,56 +28,42 @@ class CalcDialog(QDialog):
             game_modes = {"Extreme": 150, "Legend": 50, "Iron Man": 25, "Immortal": 10, "Hardcore Iron Man": 5, "Grand Master": 2}
             
             current_game_mode_calc = CalcDialog.getCurrentGameMode(self, game_modes)
-            new_game_mode_calc= CalcDialog.getNewGameMode(self, game_modes)
+            new_game_mode_calc = CalcDialog.getNewGameMode(self, game_modes)
 
             new_xp = CalcDialog.getNewXP(self, game_modes)
-            self.ui.calculatedXp.setText(str(new_xp))
+            self.ui.calculatedXp.setValue(new_xp)
 
-            wanted_level = int(self.ui.enteredLvlCompared.text())
+            wanted_level = self.ui.enteredLvlCompared.value()
             dic_level_req = int(dic_level_requirement[wanted_level])
             till_wanted_level = int(((dic_level_req - new_xp) / new_game_mode_calc) * current_game_mode_calc)
-            self.ui.calculatedXpTill99.setText(str(till_wanted_level))
+            self.ui.calculatedXpTill99.setValue(till_wanted_level)
 
-            current_xp = int(self.ui.currentXp.text())
+            current_xp = int(self.ui.currentXp.value())
             current_level = min(range(len(dic_level_requirement)), key=lambda i: abs(dic_level_requirement[i] - current_xp))
-            self.ui.currentLevel.setText(str(current_level))
+            self.ui.currentLevel.setValue(current_level)
 
             new_level = min(range(len(dic_level_requirement)), key=lambda i: abs(dic_level_requirement[i] - new_xp))
-            self.ui.calculatedLevel.setText(str(new_level))
+            self.ui.calculatedLevel.setValue(new_level)
         except:
             #Still need to add a pop-up message here
             print("An error has occurred")
 
+    def getCurrentGameMode(self, gamesmodes):
+        current_game_mode = str(self.ui.currentGamemode.currentText())
+        current_game_mode_calc = gamesmodes.get(current_game_mode)
+        return current_game_mode_calc
 
-    def getCurrentGameMode(self, GameModes):
-        Current_GameMode = str(self.ui.currentGamemode.currentText())
-        Current_GameMode_Calc = GameModes.get(Current_GameMode)
-        return Current_GameMode_Calc
-
-    def getNewGameMode(self, GameModes):
-        New_GameMode = str(self.ui.newGamemode.currentText())
-        New_GameMode_Calc = GameModes.get(New_GameMode)
-        return New_GameMode_Calc
+    def getNewGameMode(self, gamemodes):
+        new_game_mode = str(self.ui.newGamemode.currentText())
+        new_game_mode__calc = gamemodes.get(new_game_mode)
+        return new_game_mode__calc
 
     def getNewXP(self, GameModes):
-        Current_Xp = int(self.ui.currentXp.text())
-        Current_GameMode_Calc = CalcDialog.getCurrentGameMode(self, GameModes)
-        New_GameMode_Calc = CalcDialog.getNewGameMode(self, GameModes)
-        New_Xp = int((Current_Xp / Current_GameMode_Calc)*New_GameMode_Calc)
-        return New_Xp
-
-    def takeClosest(self, gamemode, xplevel):
-        pos = bisect_left(gamemode, xplevel)
-        if pos == 0:
-            return gamemode[0]
-        if pos == len(gamemode):
-            return gamemode[-1]
-        before = gamemode[pos - 1]
-        after = gamemode[pos]
-        if after - xplevel < xplevel - before:
-            return after
-        else:
-            return before
+        current_xp = int(self.ui.currentXp.value())
+        current_game_mode_calc = CalcDialog.getCurrentGameMode(self, GameModes)
+        new_game_mode_calc = CalcDialog.getNewGameMode(self, GameModes)
+        new_xp = int((current_xp / current_game_mode_calc)*new_game_mode_calc)
+        return new_xp
 
 if __name__ == '__main__':
     import sys
