@@ -45,7 +45,7 @@ class CalcDialog(QDialog):
             new_level = min(range(len(dic_level_requirement)), key=lambda i: abs(dic_level_requirement[i] - new_xp))
             self.ui.calculatedLevel.setValue(new_level)
         except:
-            #Still need to add a pop-up message here
+            # Still need to add a pop-up message here
             print("An error has occurred")
 
     def getCurrentGameMode(self, gamesmodes):
