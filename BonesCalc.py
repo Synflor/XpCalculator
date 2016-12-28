@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'BonesCalculator.ui'
-#
-# Created by: PyQt5 UI code generator 5.6
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Dialog(object):
@@ -18,19 +10,20 @@ class Ui_Dialog(object):
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Apply|QtWidgets.QDialogButtonBox.Reset)
         self.buttonBox.setCenterButtons(True)
         self.buttonBox.setObjectName("buttonBox")
-        self.currentGamemode = QtWidgets.QComboBox(Dialog)
-        self.currentGamemode.setGeometry(QtCore.QRect(10, 30, 111, 22))
-        self.currentGamemode.setFrame(True)
-        self.currentGamemode.setObjectName("currentGamemode")
-        self.currentGamemode.addItem("")
-        self.currentGamemode.addItem("")
-        self.currentGamemode.addItem("")
-        self.currentGamemode.addItem("")
-        self.currentGamemode.addItem("")
-        self.currentGamemode.addItem("")
+        self.Gamemode = QtWidgets.QComboBox(Dialog)
+        self.Gamemode.setGeometry(QtCore.QRect(10, 30, 111, 22))
+        self.Gamemode.setFrame(True)
+        self.Gamemode.setObjectName("Gamemode")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
+        self.Gamemode.addItem("")
         self.checkBox = QtWidgets.QCheckBox(Dialog)
         self.checkBox.setGeometry(QtCore.QRect(150, 30, 81, 17))
-        self.checkBox.setObjectName("checkBox")
+        self.checkBox.setObjectName("Double_Xp")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(10, 10, 111, 20))
         font = QtGui.QFont()
@@ -175,12 +168,12 @@ class Ui_Dialog(object):
         self.label_14.setFont(font)
         self.label_14.setAlignment(QtCore.Qt.AlignCenter)
         self.label_14.setObjectName("label_14")
-        self.spinBox_10 = QtWidgets.QSpinBox(Dialog)
-        self.spinBox_10.setGeometry(QtCore.QRect(160, 80, 51, 20))
-        self.spinBox_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.spinBox_10.setReadOnly(False)
-        self.spinBox_10.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
-        self.spinBox_10.setObjectName("spinBox_10")
+        self.enteredLvl = QtWidgets.QSpinBox(Dialog)
+        self.enteredLvl.setGeometry(QtCore.QRect(160, 80, 51, 20))
+        self.enteredLvl.setAlignment(QtCore.Qt.AlignCenter)
+        self.enteredLvl.setReadOnly(False)
+        self.enteredLvl.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.enteredLvl.setObjectName("enteredLvl")
         self.spinBox_11 = QtWidgets.QSpinBox(Dialog)
         self.spinBox_11.setGeometry(QtCore.QRect(20, 80, 91, 20))
         self.spinBox_11.setAlignment(QtCore.Qt.AlignCenter)
@@ -197,13 +190,13 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.currentGamemode.setItemText(0, _translate("Dialog", "Extreme"))
-        self.currentGamemode.setItemText(1, _translate("Dialog", "Legend"))
-        self.currentGamemode.setItemText(2, _translate("Dialog", "Iron Man"))
-        self.currentGamemode.setItemText(3, _translate("Dialog", "Immortal"))
-        self.currentGamemode.setItemText(4, _translate("Dialog", "Hardcore Iron Man"))
-        self.currentGamemode.setItemText(5, _translate("Dialog", "Grand Master"))
-        self.currentGamemode.setItemText(6, _translate("Dialog", "Prestiged"))
+        self.Gamemode.setItemText(0, _translate("Dialog", "Extreme"))
+        self.Gamemode.setItemText(1, _translate("Dialog", "Legend"))
+        self.Gamemode.setItemText(2, _translate("Dialog", "Iron Man"))
+        self.Gamemode.setItemText(3, _translate("Dialog", "Immortal"))
+        self.Gamemode.setItemText(4, _translate("Dialog", "Hardcore Iron Man"))
+        self.Gamemode.setItemText(5, _translate("Dialog", "Grand Master"))
+        self.Gamemode.setItemText(6, _translate("Dialog", "Prestiged"))
         self.checkBox.setText(_translate("Dialog", "Double Xp?"))
         self.label.setText(_translate("Dialog", "Gamemode"))
         self.label_2.setText(_translate("Dialog", "Regular Bone"))
@@ -219,14 +212,3 @@ class Ui_Dialog(object):
         self.label_12.setText(_translate("Dialog", "Ourg Bone (Bandos)"))
         self.label_13.setText(_translate("Dialog", "Current Xp"))
         self.label_14.setText(_translate("Dialog", "Wanted Level"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
-
